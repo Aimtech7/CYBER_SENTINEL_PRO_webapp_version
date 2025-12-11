@@ -18,8 +18,8 @@ SAFE_MODE = os.getenv("SAFE_MODE", "true").lower() == "true"
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "*"],
-    allow_methods=["*"] ,
+    allow_origins=["http://localhost:3000", "https://sentineltools.vercel.app"],
+    allow_methods=["*"],
     allow_headers=["*"]
 )
 

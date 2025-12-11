@@ -53,7 +53,7 @@ export default function NmapPage() {
   return (
     <div className="flex h-screen">
       <Sidebar />
-      <main className="flex-1 p-6 space-y-4">
+      <main className="flex-1 p-6 space-y-4 pb-16 md:pb-6">
         <div className="text-2xl font-bold">Network Mapper</div>
         {!paired && <div className="text-danger">Connect Agent in Settings</div>}
         <div className="flex gap-2">

@@ -76,7 +76,7 @@ export default function ChatbotPage() {
   return (
     <div className="flex h-screen">
       <Sidebar />
-      <main className="flex-1 p-6 space-y-4">
+      <main className="flex-1 p-6 space-y-4 pb-16 md:pb-6">
         <div className="text-2xl font-bold">Chatbot{(() => { const first = msgs.find(m=>m.role==='user'); return first ? ` — ${first.text.split(/\s+/).slice(0,6).join(' ')}` : '' })()}</div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="lg:col-span-2 bg-[#0f192a] border border-[#112136] rounded p-4">

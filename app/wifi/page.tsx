@@ -89,7 +89,7 @@ export default function WifiPage() {
   return (
     <div className="flex h-screen">
       <Sidebar />
-      <main className="flex-1 p-6 space-y-4">
+      <main className="flex-1 p-6 space-y-4 pb-16 md:pb-6">
         <div className="text-2xl font-bold">WiFi Analyzer</div>
         {!paired && <div className="text-danger">Connect Agent in Settings</div>}
         <div className="flex gap-2">

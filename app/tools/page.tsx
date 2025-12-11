@@ -37,7 +37,7 @@ export default function ToolsPage() {
   return (
     <div className="flex h-screen">
       <Sidebar />
-      <main className="flex-1 p-6 space-y-4">
+      <main className="flex-1 p-6 space-y-4 pb-16 md:pb-6">
         <div className="text-2xl font-bold">Network Tools</div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="bg-[#0f192a] border border-[#112136] rounded p-4 space-y-2">

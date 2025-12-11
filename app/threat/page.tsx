@@ -78,7 +78,7 @@ export default function ThreatPage() {
   return (
     <div className="flex h-screen">
       <Sidebar />
-      <main className="flex-1 p-6 space-y-4">
+      <main className="flex-1 p-6 space-y-4 pb-16 md:pb-6">
         <div className="text-2xl font-bold">Threat Intelligence</div>
         <div className="flex gap-2">
           <input className="bg-slate-900 px-3 py-2" value={input} onChange={e=>setInput(e.target.value)} placeholder="IP, domain, URL, hash" />

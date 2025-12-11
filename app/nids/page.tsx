@@ -25,7 +25,7 @@ export default function NidsPage() {
   return (
     <div className="flex h-screen">
       <Sidebar />
-      <main className="flex-1 p-6 space-y-4">
+      <main className="flex-1 p-6 space-y-4 pb-16 md:pb-6">
         <div className="text-2xl font-bold">Network IDS</div>
         {!paired && <div className="text-danger">Connect Agent in Settings</div>}
         <div className="bg-[#0f192a] border border-[#112136] rounded p-4 space-y-2">

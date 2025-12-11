@@ -42,22 +42,37 @@ export default function Sidebar() {
     return (<div className="w-5 h-5 rounded-md bg-[#0f192a] border border-[#112136]"></div>)
   }
   return (
-    <aside className="w-64 shrink-0 bg-[#0b1220] border-r border-[#112136]">
-      <div className="h-14 flex items-center px-4">
-        <div className="w-2 h-2 rounded-full bg-teal-400 mr-2"></div>
-        <div className="text-slate-300 font-semibold">AI Assistant</div>
-      </div>
-      <nav className="flex flex-col">
-        {items.map(i => {
-          const active = path === i.href
-          return (
-            <Link key={i.href} href={i.href} title={i.label} className={"px-4 py-3 flex items-center gap-3 border-l-4 " + (active ? 'border-teal-400 bg-[#0f192a]' : 'border-transparent hover:bg-[#0f192a]') }>
-              {icon(i.href)}
-              <div className={"text-sm " + (active ? 'text-teal-300' : 'text-slate-300')}>{i.label}</div>
-            </Link>
-          )
-        })}
+    <>
+      <aside className="hidden md:block w-64 shrink-0 bg-[#0b1220] border-r border-[#112136]">
+        <div className="h-14 flex items-center px-4">
+          <div className="w-2 h-2 rounded-full bg-teal-400 mr-2"></div>
+          <div className="text-slate-300 font-semibold">AI Assistant</div>
+        </div>
+        <nav className="flex flex-col">
+          {items.map(i => {
+            const active = path === i.href
+            return (
+              <Link prefetch={false} key={i.href} href={i.href} title={i.label} className={"px-4 py-3 flex items-center gap-3 border-l-4 " + (active ? 'border-teal-400 bg-[#0f192a]' : 'border-transparent hover:bg-[#0f192a]') }>
+                {icon(i.href)}
+                <div className={"text-sm " + (active ? 'text-teal-300' : 'text-slate-300')}>{i.label}</div>
+              </Link>
+            )
+          })}
+        </nav>
+      </aside>
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-[#0b1220] border-t border-[#112136]">
+        <div className="px-2 py-2 flex items-center gap-3 overflow-x-auto">
+          {items.map(i => {
+            const active = path === i.href
+            return (
+              <Link prefetch={false} key={i.href} href={i.href} title={i.label} className={(active ? 'bg-[#0f192a] text-teal-300' : 'text-slate-300') + ' flex items-center gap-1 px-2 py-1 rounded flex-shrink-0'}>
+                {icon(i.href)}
+                <div className="text-[10px]">{i.label}</div>
+              </Link>
+            )
+          })}
+        </div>
       </nav>
-    </aside>
+    </>
   )
 }

@@ -72,7 +72,7 @@ export default function HomePage() {
       <Sidebar />
       <div className="flex-1 flex flex-col">
         <Topbar />
-        <main className="flex-1 p-6 space-y-6">
+        <main className="flex-1 p-6 space-y-6 pb-16 md:pb-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <Card title="Ask the AI" right={<button className="btn" onClick={sendAi}>➤</button>}>
               <input className="input" placeholder="Type your query here..." value={aiQuery} onChange={e=>setAiQuery(e.target.value)} />
