@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html.dark {
+  background-color: #0b1220;
+}
+body {
+  color: #e2e8f0;
+}
+.btn {
+  @apply inline-flex items-center justify-center px-3 py-2 rounded-lg bg-[#0f192a] border border-[#112136] text-slate-200 transition-transform duration-200 ease-out;
+}
+.input {
+  @apply w-full px-3 py-2 rounded-lg bg-[#0f192a] border border-[#112136] text-slate-200 placeholder-slate-500;
+}
+.title {
+  @apply text-slate-200 text-sm;
+}
+
+button {
+  @apply transition-transform duration-200 ease-out;
+}
+button:hover {
+  @apply scale-105;
+  box-shadow: 0 0 12px rgba(77, 181, 255, 0.25);
+}
+button:active {
+  @apply scale-95;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton-card {
+  position: relative;
+  overflow: hidden;
+}
+.skeleton-bar {
+  position: relative;
+  background-color: #334155; /* slate-700 */
+  border-radius: 0.25rem;
+}
+.skeleton-bar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
